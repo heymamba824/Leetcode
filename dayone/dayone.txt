@@ -1,1 +1,17 @@
-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
+704  binary search
+1. 左闭右开区间：
+每次搜索的时候搜索左边而不搜索右边
+left = 0
+right = len(nums)
+因为每次不会取right 所以left < right 
+mid = right
+2.左开右闭区间
+搜索的时候包含了左右边界
+Left = 0
+Right = len(nums)  -1 
+While left <= right 
+每次搜索的时候 mid = left + 1 or mid = right - 1
+
+
+27.py
+使用快慢指针来将数组中的值交换
