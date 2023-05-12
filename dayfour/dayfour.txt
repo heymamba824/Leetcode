@@ -14,3 +14,13 @@ Output: [2,1,4,3]
             temp1.next = temp2
             cur = cur.next.next
 
+19.Remove Nth Node From End of List
+
+Given the head of a linked list, remove the nth node from the end of the list and return its head.
+
+Input: head = [1,2,3,4,5], n = 2
+Output: [1,2,3,5]
+
+使用快慢指针的办法，其中需要注意的细节，删除倒数n个节点，那么需要移动快指针n次而不是n-1次
+删除节点一定要使用dummy head，这样方便删除head指针
+return的是dummy.next 如果return head，一旦删除的节点是头节点就会出错
