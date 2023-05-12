@@ -24,3 +24,32 @@ Output: [1,2,3,5]
 使用快慢指针的办法，其中需要注意的细节，删除倒数n个节点，那么需要移动快指针n次而不是n-1次
 删除节点一定要使用dummy head，这样方便删除head指针
 return的是dummy.next 如果return head，一旦删除的节点是头节点就会出错
+
+160.  Intersection of Two Linked Lists
+
+Given the heads of two singly linked-lists headA and headB, return the node at which the two lists intersect. If the two linked lists have no intersection at all, return null.
+
+Input: intersectVal = 8, listA = [4,1,8,4,5], listB = [5,6,1,8,4,5], skipA = 2, skipB = 3
+Output: Intersected at '8'
+
+还是使用快慢指针的办法，根据长度来编辑快慢指针
+暴力解法： 将其中一个链表的每个节点和另一个链表比较，时间复杂度很高 m*n
+哈希：将其中一个的值存入哈希表，一旦另一个链表的值相等，继续比较接下来的值是否相等，  复杂度 m + n，比较起来很麻烦
+推荐使用快慢指针
+
+
+142. Linked List Cycle II
+Given the head of a linked list, return the node where the cycle begins. If there is no cycle, return null.
+
+There is a cycle in a linked list if there is some node in the list that can be reached again by continuously following the next pointer. Internally, pos is used to denote the index of the node that tail's next pointer is connected to (0-indexed). It is -1 if there is no cycle. Note that pos is not passed as a parameter.
+
+Do not modify the linked list.
+
+Input: head = [3,2,0,-4], pos = 1
+Output: tail connects to node index 1
+
+使用快慢指针，但是有一个细节需要注意，必须先移动快慢指针而不是先比较是否相等，因为比较的时候都是指向头指针的
+
+
+
+
