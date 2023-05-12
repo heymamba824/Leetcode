@@ -1,0 +1,25 @@
+203. 
+Given the head of a linked list and an integer val, remove all the nodes of the linked list that has Node.val == val, and return the new head.
+
+Input: head = [1,2,6,3,4,5,6], val = 6
+Output: [1,2,3,4,5]
+
+使用dummy head来进行删除，  while 语句的终止条件一定要注意
+If else的条件也要注意
+
+
+707
+构造链表功能
+
+在删除链表时，需要进行判断index， index >= size返回-1
+添加链表时，index > index 返回-1
+
+206
+206. Reverse Linked List
+
+Given the head of a singly linked list, reverse the list, and return the reversed list.
+Input: head = [1,2,3,4,5]
+Output: [5,4,3,2,1]
+
+需要使用temp指针来存cur.next的值
+并且使用cur = temp来进行移动，而不是cur = cur.next cur的值发生了改变
