@@ -1,0 +1,16 @@
+24. Swap Nodes in Pairs
+
+Given a linked list, swap every two adjacent nodes and return its head. You must solve the problem without modifying the values in the list's nodes (i.e., only nodes themselves may be changed.
+
+Input: head = [1,2,3,4]
+Output: [2,1,4,3]
+
+交换节点时，一定要注意交换之后的指向会消失，所以每次记录好将要消失的下一个指针，这样就能避免出错
+            temp1 = cur.next
+            temp2 = cur.next.next.next
+
+            cur.next = cur.next.next
+            cur.next.next = temp1
+            temp1.next = temp2
+            cur = cur.next.next
+
