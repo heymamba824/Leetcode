@@ -1,0 +1,21 @@
+139. Word Break
+
+Given a string s and a dictionary of strings wordDict, return true if s can be segmented into a space-separated sequence of one or more dictionary words.
+
+Note that the same word in the dictionary may be reused multiple times in the segmentation.
+
+Input: s = "leetcode", wordDict = ["leet","code"]
+Output: true
+Explanation: Return true because "leetcode" can be segmented as "leet code".
+
+
+将dp变成bool类型，dp[len(s)]记录结果
+
+其中dp[n] = dp[n-s] and s in words
+
+其中word[n-s] == word作为判断条件进行优化，不用每次判断取出来的word是否在words中
+
+遍历顺序有要求，由于最终结果是排序的，所以最后遍历word
+
+
+时间复杂度？？
