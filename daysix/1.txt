@@ -1,0 +1,7 @@
+1 two sum
+
+使用dic存地址
+
+key - value 
+Key就是i的值
+value就是nums[I]的值
