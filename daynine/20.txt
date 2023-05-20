@@ -1,0 +1,19 @@
+20. Valid Parentheses
+Given a string s containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
+
+An input string is valid if:
+
+Open brackets must be closed by the same type of brackets.
+Open brackets must be closed in the correct order.
+Every close bracket has a corresponding open bracket of the same type.
+
+
+Input: s = "()"
+Output: true
+
+
+
+Debug 好几次才debug出来
+需要考虑很多情况:
+1. 刚开始stack为空的情况，比如输入是]
+2.最后判断是否为true,主要的情况是stack必须是空的
