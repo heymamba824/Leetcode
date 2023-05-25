@@ -1,0 +1,11 @@
+117. Populating Next Right Pointers in Each Node II
+
+
+Populate each next pointer to point to its next right node. If there is no next right node, the next pointer should be set to NULL.
+
+Initially, all next pointers are set to NULL.
+
+
+
+记住一个关键的信息
+所有node都储存在deque中，所以不需要temp指针来记录下一个节点
