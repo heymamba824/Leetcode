@@ -1,0 +1,16 @@
+222. Count Complete Tree Nodes
+
+
+Given the root of a complete binary tree, return the number of the nodes in the tree.
+
+According to Wikipedia, every level, except possibly the last, is completely filled in a complete binary tree, and all nodes in the last level are as far left as possible. It can have between 1 and 2h nodes inclusive at the last level h.
+
+Design an algorithm that runs in less than O(n) time complexity.
+
+
+
+
+判断是否是平衡二叉树：
+1. 左子树的深度等于右子树的深度
+2.如果是，直接使用公式来计算
+3.如果不是，分别计算左右两颗子树的节点数最后相加
