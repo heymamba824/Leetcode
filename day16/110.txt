@@ -1,0 +1,10 @@
+110
+
+Given a binary tree, determine if it is 
+height-balanced
+
+
+
+1.计算左右子树的高度差，不符合条件一律当成-1
+2.递归的时候保留-1值进行判断
+3.如果成立，一直输出值

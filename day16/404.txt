@@ -1,0 +1,16 @@
+w404. Sum of Left Leaves
+
+
+Given the root of a binary tree, return the sum of all left leaves.
+
+A leaf is a node with no children. A left leaf is a leaf that is the left child of another node.
+
+
+递归：post_order
+递归的终止条件：
+左节点，每次返回该节点的值
+
+
+迭代：postorder
+
+无所谓的，每次对节点进行了判断
