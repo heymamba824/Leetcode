@@ -1,0 +1,15 @@
+101. Symmetric Tree
+
+Given the root of a binary tree, check whether it is a mirror of itself (i.e., symmetric around its center).
+
+
+
+1.比较对称性而不是左右是否相等
+2.可以使用递归也可以使用迭代
+递归：
+判断两个节点是否相等，判断条件有很多种
+当两个节点值相等的时候，继续往下循环而不是直接返回True
+
+迭代：
+使用deque和stack都可以
+每次将需要比较的节点放进stack，比较完之后继续即可

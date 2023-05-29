@@ -1,4 +1,4 @@
-704  binary search
+ b704  binary search
 1. 左闭右开区间：
 每次搜索的时候搜索左边而不搜索右边
 left = 0

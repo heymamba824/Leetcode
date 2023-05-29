@@ -1,4 +1,4 @@
-class Solution:
+ class Solution:
     def removeElements(self, head: Optional[ListNode], val: int) -> Optional[ListNode]:
         dummy = ListNode()
         dummy.next = head
