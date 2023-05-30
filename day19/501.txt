@@ -1,0 +1,6 @@
+501. Find Mode in Binary Search Tree
+
+
+中序遍历
+
+使用pre来记录上一个节点

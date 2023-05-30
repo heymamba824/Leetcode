@@ -15,3 +15,25 @@ class Solution:
             
         traversal(root)
         return diff
+
+
+class Solution:
+    def getMinimumDifference(self, root: Optional[TreeNode]) -> int:
+        #inorder: left right root
+        if not root:
+            return 0
+        stack =[]
+        cur = root
+        pre = None
+        re = float("inf")
+        while stack or cur:
+            if cur:
+                stack.append(cur)
+                cur = cur.left
+            else:
+                cur = stack.pop()
+                if pre:
+                    re = min(re,abs(pre.val-cur.val))
+                pre = cur 
+                cur = cur.right
+        return re 
