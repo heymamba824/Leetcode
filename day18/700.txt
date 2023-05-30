@@ -1,0 +1,8 @@
+700. Search in a Binary Search Tree
+
+
+
+递归里面一定要有返回值
+
+if root.val > val:
+            return self.searchBST(root.left,val)
