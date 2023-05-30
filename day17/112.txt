@@ -1,0 +1,17 @@
+112. Path Sum
+
+
+Given the root of a binary tree and an integer targetSum, return true if the tree has a root-to-leaf path such that adding up all the values along the path equals targetSum.
+
+A leaf is a node with no children.
+
+
+
+
+
+1. Iterate
+由于需要记录当前val的值比较是否等于target，所以需要往stack存入额外的值
+
+
+2.recursion：
+可以直接使用原函数，也可以添加额外的函数来进行判断
