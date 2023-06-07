@@ -1,0 +1,14 @@
+491. Non-decreasing Subsequences
+
+
+
+Given an integer array nums, return all the different possible non-decreasing subsequences of the given array with at least two elements. You may return the answer in any order.
+
+
+
+Input: nums = [4,6,7,7]
+Output: [[4,6],[4,6,7],[4,6,7,7],[4,7],[4,7,7],[6,7],[6,7,7],[7,7]]
+
+
+由于是不能对数组进行排序所以无法使用nums[i] == nums[i-1]来进行去重
+可以使用set来进行去重，对于出现的值进行去重
