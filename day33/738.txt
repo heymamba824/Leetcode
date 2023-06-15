@@ -1,0 +1,15 @@
+738. Monotone Increasing Digits
+
+
+An integer has monotone increasing digits if and only if each pair of adjacent digits x and y satisfy x <= y.
+
+Given an integer n, return the largest number that is less than or equal to n with monotone increasing digits.
+
+
+
+Input: n = 10
+Output: 9
+
+
+思路是没问题的，从后往前遍历
+但是记住一点'0' '9' '9' 使用int(''.join)之后这个0就会消失

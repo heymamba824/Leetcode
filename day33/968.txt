@@ -1,0 +1,24 @@
+968. Binary Tree Cameras
+
+
+You are given the root of a binary tree. We install cameras on the tree nodes where each camera at a node can monitor its parent, itself, and its immediate children.
+
+Return the minimum number of cameras needed to monitor all nodes of the tree.
+
+
+Input: root = [0,0,null,0,0]
+Output: 1
+Explanation: One camera is enough to monitor all nodes if placed as shown.
+
+1.贪心的思想：
+选择在node上面放摄像头，
+Node可以监控lead也可以监控parent
+
+2.最后需要判断根节点的情况：
+为什么：
+因为对于根节点来说没有父节点，所以在递归判断是否覆盖的时候无法进行判断
+如果添加虚拟的父节点可以解决这个问题
+或者单独在递归外对节点进行比较
+
+
+思考一下 如果只有一个节点的话 结果会是多少
