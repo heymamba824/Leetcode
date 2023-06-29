@@ -1,0 +1,21 @@
+188. Best Time to Buy and Sell Stock IV
+
+
+You are given an integer array prices where prices[i] is the price of a given stock on the ith day, and an integer k.
+
+Find the maximum profit you can achieve. You may complete at most k transactions: i.e. you may buy at most k times and sell at most k times.
+
+Note: You may not engage in multiple transactions simultaneously (i.e., you must sell the stock before you buy again).
+
+
+Input: k = 2, prices = [2,4,1]
+Output: 2
+Explanation: Buy on day 1 (price = 2) and sell on day 2 (price = 4), profit = 4-2 = 2.
+
+
+1 dp:
+牢记有三种状态而不是两种，一种是没有任何操作，一种是买入卖出一次，一种是买入卖出两次
+如果只有买入卖出的话，意味着从第一天就要买入卖出
+
+2 dfs + memo：
+将执行的总次数作为递归结束的条件
