@@ -12,3 +12,29 @@ class Solution:
                     dp[i][j] = max(dp[i][j],dp[i-1][j-1]+1)
                 re = max(dp[i][j],re)
         return re 
+
+
+
+class Solution:
+    def findLength(self, nums1: List[int], nums2: List[int]) -> int:
+        memo = {}
+        
+        def dfs(n, m):
+            if n == len(nums1) or m == len(nums2):
+                return 0 
+            key = (n, m)
+            if key in memo:
+                return memo[key]
+            if nums1[n] == nums2[m]:
+                memo[key] = 1 + dfs(n+1, m+1)
+            else:
+                memo[key] = 0
+            return memo[key]
+        
+        re = 0
+        for i in range(len(nums1)):
+            for j in range(len(nums2)):
+                length = dfs(i, j)
+                re = max(re, length)
+        
+        return re
