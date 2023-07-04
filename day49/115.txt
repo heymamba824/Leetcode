@@ -1,0 +1,19 @@
+115. Distinct Subsequences
+
+
+Given two strings s and t, return the number of distinct 
+subsequences
+ of s which equals t.
+
+The test cases are generated so that the answer fits on a 32-bit signed integer.
+
+
+Input: s = "rabbbit", t = "rabbit"
+Output: 3
+
+
+1. dp：
+I，j分别表示 i-1 和 j-1的距离，dp[i][j] = dp[i-1][j-1] + dp[i-1][j]可以选择当前也可以不选择当前的
+
+2. Dfs + memo:
+和dp原理差不多
