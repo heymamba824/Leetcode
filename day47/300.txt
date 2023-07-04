@@ -1,0 +1,20 @@
+300. Longest Increasing Subsequence
+
+
+Given an integer array nums, return the length of the longest strictly increasing 
+subsequence
+
+
+Input: nums = [10,9,2,5,3,7,101,18]
+Output: 4
+Explanation: The longest increasing subsequence is [2,3,7,101], therefore the length is 4.
+
+
+
+1. dfs + memo:
+结果不一定是dp[-1]
+
+
+2. Dp:
+牢记dp数组的含义，表示的是到i结尾的数组中连续递增的最大值，因为每次需要将i+1来比较判断是否是递增的
+最终的结果不一定在dp[-1]
