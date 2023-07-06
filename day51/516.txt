@@ -1,0 +1,39 @@
+516. Longest Palindromic Subsequence
+
+
+Given a string s, find the longest palindromic subsequence's length in s.
+
+A subsequence is a sequence that can be derived from another sequence by deleting some or no elements without changing the order of the remaining elements.
+
+
+
+
+Input: s = "bbbab"
+Output: 4
+Explanation: One possible longest palindromic subsequence is "bbbb".
+
+
+1. Dp:
+递推公式：dp[i][j] = dp[i+1][j-1] + 2
+所以I是range(n-1,-1,-1)， 由于是计算数量，遍历的时候j从i+1开始而不是从i开始
+
+2. dfs + memo：
+
+
+class Solution:
+    def longestPalindromeSubseq(self, s: str) -> int:
+        memo = {}
+        def dfs(l,r):
+            key = (l,r)
+            if key in memo:
+                return memo[key]
+            if l > r :
+                return 0
+            if l == r :
+                return 1
+            if s[l] == s[r]:
+                memo[key] = dfs(l+1,r-1) + 2
+            else:
+                memo[key] = max(dfs(l+1,r),dfs(l,r-1))
+            return memo[key]
+        return dfs(0,len(s)-1)
